@@ -101,7 +101,10 @@ folder:</p>
 <h3 id="scatter-plot">Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot"></a>
 </h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">sysuse</span> auto, <span class="kw">clear</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="kw">scatter</span> mpg <span class="kw">weight</span>, <span class="bn">title</span>(<span class="st">"Scatter Plot"</span>)</span></code></pre></div>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> mpg <span class="kw">weight</span> <span class="kw">if</span> foreign==0, msize(large)) <span class="co">///</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>       (<span class="kw">scatter</span> mpg <span class="kw">weight</span> <span class="kw">if</span> foreign==1, msize(large)), <span class="co">///</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>       <span class="bn">title</span>(<span class="st">"Fuel Efficiency by Vehicle Weight"</span>) <span class="co">///</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>       <span class="bn">legend</span>(<span class="kw">order</span>(1 <span class="st">"Domestic"</span> 2 <span class="st">"Foreign"</span>))</span></code></pre></div>
 <div class="float">
 <img src="stata_files/scatter.png" alt="Scatter Plot"><div class="figcaption">Scatter Plot</div>
 </div>
@@ -109,36 +112,34 @@ folder:</p>
 <div class="section level3">
 <h3 id="bar-chart">Bar Chart<a class="anchor" aria-label="anchor" href="#bar-chart"></a>
 </h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="kw">mean</span>) mpg, <span class="bn">over</span>(foreign) <span class="bn">title</span>(<span class="st">"Bar Chart"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="kw">mean</span>) mpg, <span class="bn">over</span>(rep78) <span class="co">///</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>      <span class="bn">title</span>(<span class="st">"Average MPG by Repair Record"</span>) <span class="co">///</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>      <span class="bn">blabel</span>(<span class="bn">bar</span>, <span class="kw">format</span>(%4.1f))</span></code></pre></div>
 <div class="float">
 <img src="stata_files/bar.png" alt="Bar Chart"><div class="figcaption">Bar Chart</div>
 </div>
 </div>
 <div class="section level3">
-<h3 id="histogram">Histogram<a class="anchor" aria-label="anchor" href="#histogram"></a>
-</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">histogram</span> mpg, <span class="bn">title</span>(<span class="st">"Histogram"</span>)</span></code></pre></div>
-<div class="float">
-<img src="stata_files/histogram.png" alt="Histogram"><div class="figcaption">Histogram</div>
-</div>
-</div>
-<div class="section level3">
 <h3 id="box-plot">Box Plot<a class="anchor" aria-label="anchor" href="#box-plot"></a>
 </h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">graph</span> box mpg, <span class="bn">over</span>(rep78) <span class="bn">title</span>(<span class="st">"Box Plot"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">graph</span> box mpg, <span class="bn">over</span>(foreign) <span class="co">///</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>      <span class="bn">title</span>(<span class="st">"Fuel Efficiency Comparison"</span>)</span></code></pre></div>
 <div class="float">
 <img src="stata_files/boxplot.png" alt="Box Plot"><div class="figcaption">Box Plot</div>
 </div>
 </div>
 <div class="section level3">
-<h3 id="multiple-series">Multiple Series<a class="anchor" aria-label="anchor" href="#multiple-series"></a>
+<h3 id="line-graph">Line Graph<a class="anchor" aria-label="anchor" href="#line-graph"></a>
 </h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> mpg <span class="kw">weight</span> <span class="kw">if</span> foreign==0) <span class="co">///</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>       (<span class="kw">scatter</span> mpg <span class="kw">weight</span> <span class="kw">if</span> foreign==1), <span class="co">///</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>       <span class="bn">legend</span>(<span class="kw">label</span>(1 <span class="st">"Domestic"</span>) <span class="kw">label</span>(2 <span class="st">"Foreign"</span>)) <span class="co">///</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>       <span class="bn">title</span>(<span class="st">"Multiple Series"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">sysuse</span> uslifeexp, <span class="kw">clear</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">line</span> le_wmale <span class="fu">year</span>) <span class="co">///</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>       (<span class="kw">line</span> le_wfemale <span class="fu">year</span>) <span class="co">///</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>       (<span class="kw">line</span> le_bmale <span class="fu">year</span>) <span class="co">///</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>       (<span class="kw">line</span> le_bfemale <span class="fu">year</span>), <span class="co">///</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>       <span class="bn">title</span>(<span class="st">"U.S. Life Expectancy Trends"</span>) <span class="co">///</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>       <span class="bn">legend</span>(<span class="kw">order</span>(1 <span class="st">"White Male"</span> 2 <span class="st">"White Female"</span> 3 <span class="st">"Black Male"</span> 4 <span class="st">"Black Female"</span>))</span></code></pre></div>
 <div class="float">
-<img src="stata_files/multi.png" alt="Multiple Series"><div class="figcaption">Multiple Series</div>
+<img src="stata_files/line.png" alt="Line Graph"><div class="figcaption">Line Graph</div>
 </div>
 </div>
 </div>
@@ -149,67 +150,71 @@ folder:</p>
 <thead><tr class="header">
 <th>Color</th>
 <th>RGB</th>
+<th>Hex</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
 <td>Blue</td>
 <td>35 97 146</td>
+<td>#236192</td>
 </tr>
 <tr class="even">
 <td>Gold</td>
 <td>255 205 0</td>
+<td>#FFCD00</td>
 </tr>
 <tr class="odd">
 <td>Green</td>
 <td>113 152 74</td>
+<td>#71984A</td>
 </tr>
 <tr class="even">
 <td>Orange</td>
 <td>223 106 46</td>
+<td>#DF6A2E</td>
 </tr>
 <tr class="odd">
 <td>Cyan</td>
 <td>135 209 230</td>
+<td>#87D1E6</td>
 </tr>
 <tr class="even">
 <td>Magenta</td>
 <td>244 81 151</td>
+<td>#F45197</td>
 </tr>
 <tr class="odd">
 <td>Dark Blue</td>
 <td>17 28 78</td>
+<td>#111C4E</td>
 </tr>
 <tr class="even">
 <td>Brown</td>
 <td>119 77 40</td>
+<td>#774D28</td>
 </tr>
 <tr class="odd">
 <td>Dark Grey</td>
 <td>101 102 93</td>
+<td>#66665D</td>
 </tr>
 <tr class="even">
 <td>Custard</td>
 <td>246 223 164</td>
+<td>#F6DFA4</td>
 </tr>
 <tr class="odd">
 <td>Light Blue</td>
 <td>196 207 218</td>
+<td>#C4CFDA</td>
 </tr>
 <tr class="even">
 <td>Light Grey</td>
 <td>200 200 200</td>
+<td>#C8C8C8</td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section level2">
-<h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
-</h2>
-<ul>
-<li>White background</li>
-<li>Horizontal grid lines</li>
-<li>Clean, professional appearance</li>
-</ul>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

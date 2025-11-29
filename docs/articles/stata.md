@@ -34,7 +34,10 @@ set scheme uaf, permanently
 
 ``` stata
 sysuse auto, clear
-scatter mpg weight, title("Scatter Plot")
+twoway (scatter mpg weight if foreign==0, msize(large)) ///
+       (scatter mpg weight if foreign==1, msize(large)), ///
+       title("Fuel Efficiency by Vehicle Weight") ///
+       legend(order(1 "Domestic" 2 "Foreign"))
 ```
 
 ![Scatter Plot](stata_files/scatter.png)
@@ -44,65 +47,55 @@ Scatter Plot
 ### Bar Chart
 
 ``` stata
-graph bar (mean) mpg, over(foreign) title("Bar Chart")
+graph bar (mean) mpg, over(rep78) ///
+      title("Average MPG by Repair Record") ///
+      blabel(bar, format(%4.1f))
 ```
 
 ![Bar Chart](stata_files/bar.png)
 
 Bar Chart
 
-### Histogram
-
-``` stata
-histogram mpg, title("Histogram")
-```
-
-![Histogram](stata_files/histogram.png)
-
-Histogram
-
 ### Box Plot
 
 ``` stata
-graph box mpg, over(rep78) title("Box Plot")
+graph box mpg, over(foreign) ///
+      title("Fuel Efficiency Comparison")
 ```
 
 ![Box Plot](stata_files/boxplot.png)
 
 Box Plot
 
-### Multiple Series
+### Line Graph
 
 ``` stata
-twoway (scatter mpg weight if foreign==0) ///
-       (scatter mpg weight if foreign==1), ///
-       legend(label(1 "Domestic") label(2 "Foreign")) ///
-       title("Multiple Series")
+sysuse uslifeexp, clear
+twoway (line le_wmale year) ///
+       (line le_wfemale year) ///
+       (line le_bmale year) ///
+       (line le_bfemale year), ///
+       title("U.S. Life Expectancy Trends") ///
+       legend(order(1 "White Male" 2 "White Female" 3 "Black Male" 4 "Black Female"))
 ```
 
-![Multiple Series](stata_files/multi.png)
+![Line Graph](stata_files/line.png)
 
-Multiple Series
+Line Graph
 
 ## Scheme Colors
 
-| Color      | RGB         |
-|------------|-------------|
-| Blue       | 35 97 146   |
-| Gold       | 255 205 0   |
-| Green      | 113 152 74  |
-| Orange     | 223 106 46  |
-| Cyan       | 135 209 230 |
-| Magenta    | 244 81 151  |
-| Dark Blue  | 17 28 78    |
-| Brown      | 119 77 40   |
-| Dark Grey  | 101 102 93  |
-| Custard    | 246 223 164 |
-| Light Blue | 196 207 218 |
-| Light Grey | 200 200 200 |
-
-## Features
-
-- White background
-- Horizontal grid lines
-- Clean, professional appearance
+| Color      | RGB         | Hex      |
+|------------|-------------|----------|
+| Blue       | 35 97 146   | \#236192 |
+| Gold       | 255 205 0   | \#FFCD00 |
+| Green      | 113 152 74  | \#71984A |
+| Orange     | 223 106 46  | \#DF6A2E |
+| Cyan       | 135 209 230 | \#87D1E6 |
+| Magenta    | 244 81 151  | \#F45197 |
+| Dark Blue  | 17 28 78    | \#111C4E |
+| Brown      | 119 77 40   | \#774D28 |
+| Dark Grey  | 101 102 93  | \#66665D |
+| Custard    | 246 223 164 | \#F6DFA4 |
+| Light Blue | 196 207 218 | \#C4CFDA |
+| Light Grey | 200 200 200 | \#C8C8C8 |
