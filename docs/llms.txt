@@ -13,7 +13,7 @@ Guidelines](https://www.uaf.edu/universityrelations/guidelines/design/color.php)
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("rdazadda/UAF-color-scheme")
+devtools::install_github("rdazadda/UAF-color-schemes")
 ```
 
 ### Usage
@@ -36,7 +36,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
 ```
 
 See [Basic
-Use](https://rdazadda.github.io/UAF-color-scheme/articles/basicuse.md)
+Use](https://rdazadda.github.io/UAF-color-schemes/articles/basicuse.md)
 for more examples.
 
 ------------------------------------------------------------------------
@@ -46,7 +46,7 @@ for more examples.
 ### Installation
 
 ``` stata
-net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-scheme/main/")
+net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-schemes/main/")
 ```
 
 ### Usage
@@ -61,7 +61,7 @@ histogram mpg
 ```
 
 See [Stata
-Usage](https://rdazadda.github.io/UAF-color-scheme/articles/stata.md)
+Usage](https://rdazadda.github.io/UAF-color-schemes/articles/stata.md)
 for more examples.
 
 ------------------------------------------------------------------------
@@ -95,6 +95,6 @@ Research
 ### Articles
 
 - [Basic
-  Use](https://rdazadda.github.io/UAF-color-scheme/articles/basicuse.md):
+  Use](https://rdazadda.github.io/UAF-color-schemes/articles/basicuse.md):
 - [Stata
-  Usage](https://rdazadda.github.io/UAF-color-scheme/articles/stata.md):
+  Usage](https://rdazadda.github.io/UAF-color-schemes/articles/stata.md):

@@ -12,7 +12,7 @@ vignette: >
 Install the UAF graph scheme in Stata:
 
 ```stata
-net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-scheme/main/")
+net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-schemes/main/")
 ```
 
 Or manually copy `scheme-uaf.scheme` to your Stata ado folder:

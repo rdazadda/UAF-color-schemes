@@ -12,7 +12,7 @@ Colors from [UAF Brand Guidelines](https://www.uaf.edu/universityrelations/guide
 
 ```r
 # install.packages("devtools")
-devtools::install_github("rdazadda/UAF-color-scheme")
+devtools::install_github("rdazadda/UAF-color-schemes")
 ```
 
 ### Usage
@@ -43,7 +43,7 @@ See [Basic Use](articles/basicuse.html) for more examples.
 ### Installation
 
 ```stata
-net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-scheme/main/")
+net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-schemes/main/")
 ```
 
 ### Usage

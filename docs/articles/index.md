@@ -3,6 +3,6 @@
 ### Articles
 
 - [Basic
-  Use](https://rdazadda.github.io/UAF-color-scheme/articles/basicuse.md):
+  Use](https://rdazadda.github.io/UAF-color-schemes/articles/basicuse.md):
 - [Stata
-  Usage](https://rdazadda.github.io/UAF-color-scheme/articles/stata.md):
+  Usage](https://rdazadda.github.io/UAF-color-schemes/articles/stata.md):

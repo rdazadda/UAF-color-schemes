@@ -17,7 +17,7 @@ library(ggplot2)
 
 ```{r eval=FALSE}
 # install.packages("devtools")
-devtools::install_github("rdazadda/UAF-color-scheme")
+devtools::install_github("rdazadda/UAF-color-schemes")
 ```
 
 ## Load Package
