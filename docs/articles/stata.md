@@ -5,7 +5,7 @@
 Install the UAF graph scheme in Stata:
 
 ``` stata
-net install uaf, from("https://raw.githubusercontent.com/canhr/uaf-graph-scheme/main/")
+net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-scheme/main/")
 ```
 
 Or manually copy `scheme-uaf.scheme` to your Stata ado folder:

@@ -4,7 +4,7 @@
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("canhr/uafcolors")
+devtools::install_github("rdazadda/UAF-color-scheme")
 ```
 
 ## Load Package

@@ -13,7 +13,7 @@ Guidelines](https://www.uaf.edu/universityrelations/guidelines/design/color.php)
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("canhr/uafcolors")
+devtools::install_github("rdazadda/UAF-color-scheme")
 ```
 
 ### Usage
@@ -35,7 +35,9 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   theme_uaf()
 ```
 
-See [Basic Use](articles/basicuse.md) for more examples.
+See [Basic
+Use](https://rdazadda.github.io/UAF-color-scheme/articles/basicuse.md)
+for more examples.
 
 ------------------------------------------------------------------------
 
@@ -44,7 +46,7 @@ See [Basic Use](articles/basicuse.md) for more examples.
 ### Installation
 
 ``` stata
-net install uaf, from("https://raw.githubusercontent.com/canhr/uaf-graph-scheme/main/")
+net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-scheme/main/")
 ```
 
 ### Usage
@@ -58,7 +60,9 @@ graph bar (mean) mpg, over(foreign)
 histogram mpg
 ```
 
-See [Stata Usage](articles/stata.md) for more examples.
+See [Stata
+Usage](https://rdazadda.github.io/UAF-color-scheme/articles/stata.md)
+for more examples.
 
 ------------------------------------------------------------------------
 
@@ -81,4 +85,5 @@ See [Stata Usage](articles/stata.md) for more examples.
 
 ------------------------------------------------------------------------
 
-CANHR - Center for Alaska Native Health Research
+Developed by the Numbers Team at CANHR - Center for Alaska Native Health
+Research

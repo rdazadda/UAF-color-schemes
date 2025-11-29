@@ -2,5 +2,7 @@
 
 ### Articles
 
-- [Basic Use](basicuse.md):
-- [Stata Usage](stata.md):
+- [Basic
+  Use](https://rdazadda.github.io/UAF-color-scheme/articles/basicuse.md):
+- [Stata
+  Usage](https://rdazadda.github.io/UAF-color-scheme/articles/stata.md):

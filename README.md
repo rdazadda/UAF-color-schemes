@@ -12,7 +12,7 @@ Colors from [UAF Brand Guidelines](https://www.uaf.edu/universityrelations/guide
 
 ```r
 # install.packages("devtools")
-devtools::install_github("canhr/uafcolors")
+devtools::install_github("rdazadda/UAF-color-scheme")
 ```
 
 ### Usage
@@ -43,7 +43,7 @@ See [Basic Use](articles/basicuse.html) for more examples.
 ### Installation
 
 ```stata
-net install uaf, from("https://raw.githubusercontent.com/canhr/uaf-graph-scheme/main/")
+net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-scheme/main/")
 ```
 
 ### Usage
@@ -81,4 +81,4 @@ See [Stata Usage](articles/stata.html) for more examples.
 
 ---
 
-CANHR - Center for Alaska Native Health Research
+Developed by the Numbers Team at CANHR - Center for Alaska Native Health Research

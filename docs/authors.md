@@ -2,22 +2,25 @@
 
 ## Authors
 
-- **CANHR Center for Alaska Native Health Research**. Author,
-  maintainer.
+- **Raymond Dacosta Azadda**. Author, maintainer.
+
+- **Andrew Grogan-Kaylor**. Author.
+
+- **KyungSook Lee**. Author.
 
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/canhr/uafcolors/blob/HEAD/DESCRIPTION)
+[`inst/CITATION`](https://github.com/rdazadda/UAF-color-scheme/blob/HEAD/inst/CITATION)
 
-Center for Alaska Native Health Research C (2025). *uafcolors:
-University of Alaska Fairbanks Colors for R Graphs*. R package version
-1.0, <https://github.com/canhr/uafcolors>.
+Azadda, R. D., Grogan-Kaylor, A., & Lee, K. (2025). uafcolors:
+University of Alaska Fairbanks Colors for R and Stata. R package version
+1.0. https://github.com/rdazadda/UAF-color-scheme
 
     @Manual{,
-      title = {uafcolors: University of Alaska Fairbanks Colors for R Graphs},
-      author = {CANHR {Center for Alaska Native Health Research}},
+      title = {{uafcolors}: University of Alaska Fairbanks Colors for {R} and {Stata}},
+      author = {Raymond Dacosta Azadda and Andrew Grogan-Kaylor and KyungSook Lee},
       year = {2025},
       note = {R package version 1.0},
-      url = {https://github.com/canhr/uafcolors},
+      url = {https://github.com/rdazadda/UAF-color-scheme},
     }

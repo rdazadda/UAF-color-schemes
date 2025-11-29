@@ -1,4 +1,4 @@
-url: ~
+url: https://rdazadda.github.io/UAF-color-scheme/
 template:
   bootstrap: 5
   bslib:
@@ -26,8 +26,8 @@ articles:
 
 footer:
   structure:
-    left: [canhr]
+    left: [developed]
     right: [source]
   components:
-    canhr: CANHR - Center for Alaska Native Health Research
+    developed: Developed by the Numbers Team at CANHR
     source: "[UAF Brand Guidelines](https://www.uaf.edu/universityrelations/guidelines/design/color.php)"
